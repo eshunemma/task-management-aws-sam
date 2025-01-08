@@ -13,3 +13,7 @@ Resources:
     Properties:
       IdentityPoolName: TaskIdentityPool
       AllowUnauthenticatedIdentities: false
+
+Outputs:
+  UserPoolId:
+  Value: !GetAtt CognitoUserPool.UserPoolId
