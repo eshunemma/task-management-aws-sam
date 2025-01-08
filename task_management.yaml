@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Task Management System"
+
+Resources:
+  CognitoUserPool:
+  Type: AWS::Cognito::UserPool
+  Properties:
+    UserPoolName: TaskUserPool
+    AutoVerifiedAttributes:
+      - email
+  CognitoIdentityPool:
+    Type: AWS::Cognito::IdentityPool
+    Properties:
+      IdentityPoolName: TaskIdentityPool
+      AllowUnauthenticatedIdentities: false
